@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 AUTH_USER_MODEL = 'rbac.User'
 
 
@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rbac',        
     'rest_framework.authtoken',
+    'whitenoise.runserver_nostatic',
+
 ]
 
 MIDDLEWARE = [
