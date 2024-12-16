@@ -1,0 +1,36 @@
+# Environment files
+.env
+env/
+
+# Database files
+*.sqlite3
+*.db
+
+# Django secret key
+*.key
+
+# Django migration files
+**/migrations/*.pyc
+**/migrations/*.py
+
+# Byte-compiled files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Media/uploads folder (if used)
+media/
+uploads/
+
+# Logs and temp files
+*.log
+*.out
+*.bak
+*.swp
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.iml
+.DS_Store
