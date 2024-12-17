@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 from dotenv import load_dotenv
 load_dotenv()  # Explicitly load .env file
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -88,14 +88,13 @@ WSGI_APPLICATION = 'rbac_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('DATABASE_NAME'),
-        'USER': os.getenv('DATABASE_USER'),
-        'PASSWORD': os.getenv('DATABASE_PASSWORD',default=''),
-        'HOST': os.getenv('DATABASE_HOST', default='127.0.0.1'),
-        'PORT': os.getenv('DATABASE_PORT', default='3306'),
+        'NAME': config('DATABASE_NAME'),
+        'USER': config('DATABASE_USER'),
+        'PASSWORD': config('DATABASE_PASSWORD',default=''),
+        'HOST': config('DATABASE_HOST', default='127.0.0.1'),
+        'PORT': config('DATABASE_PORT', default='3306'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
