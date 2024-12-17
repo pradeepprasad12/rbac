@@ -1,1 +1,1 @@
-web: gunicorn 'rbac.wsgi'
+web: gunicorn 'rbac_project.wsgi'
