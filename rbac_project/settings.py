@@ -77,7 +77,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'rbac_project.wsgi.application'
+WSGI_APPLICATION = 'rbac_project.wsgi.app'
 
 
 # Database
