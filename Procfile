@@ -1,1 +1,1 @@
-web: gunicorn 'rbac_project.wsgi'
+web: python manage.py migrate && gunicorn rbac_project.wsgi
